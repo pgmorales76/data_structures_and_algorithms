@@ -34,7 +34,7 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 ------------------------------------------------------------------------------------------------ */
 
 const addQuestion = (arr) => {
-  const add_question_array = arr.map(string => `${string}?`);
+  const add_question_array = arr.map((string) => `${string}?`);
   return add_question_array;
   // Solution code here...
 };
