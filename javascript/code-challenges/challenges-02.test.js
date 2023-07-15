@@ -9,7 +9,7 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 ------------------------------------------------------------------------------------------------ */
 
 const raisedToTheThird = (arr) => {
-  exponent_array = [];
+  const exponent_array = [];
   arr.forEach((number) => exponent_array.push(Math.pow(number, 3)));
   return exponent_array;
   // Solution code here...
