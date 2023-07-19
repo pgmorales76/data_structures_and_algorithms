@@ -1,5 +1,7 @@
 'use strict';
 
+const { filter } = require('cheerio/lib/api/traversing');
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -66,6 +68,10 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
+  const not_in_first_array = arr.filter(
+    (element) => !forbiddenValues.includes(element)
+  );
+  return not_in_first_array;
   // Solution code here...
 };
 
