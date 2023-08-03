@@ -44,6 +44,10 @@ Write a function named addPurchases that, given an array of objects as input, us
 ------------------------------------------------------------------------------------------------ */
 
 const addPurchases = (arr) => {
+  return arr.reduce((accumulator, current_value) => {
+    accumulator = accumulator + current_value.purchasePrice;
+    return accumulator;
+  }, 0);
   // Solution code here...
 };
 
