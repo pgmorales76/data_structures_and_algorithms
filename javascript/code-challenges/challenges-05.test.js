@@ -24,10 +24,7 @@ Write a function named addValues that, given an array of numbers as input, uses 
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr) => {
-  return arr.reduce(
-    (accumulator, current_value) => accumulator + current_value,
-    0
-  );
+  return arr.reduce((accumulator, value) => accumulator + value, 0);
   // Solution code here...
 };
 
@@ -44,8 +41,8 @@ Write a function named addPurchases that, given an array of objects as input, us
 ------------------------------------------------------------------------------------------------ */
 
 const addPurchases = (arr) => {
-  return arr.reduce((accumulator, current_value) => {
-    accumulator = accumulator + current_value.purchasePrice;
+  return arr.reduce((accumulator, value) => {
+    accumulator = accumulator + value.purchasePrice;
     return accumulator;
   }, 0);
   // Solution code here...
@@ -60,6 +57,13 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
+  let count = 0;
+  arr.reduce((accumulator, value) => {
+    accumulator + value;
+    count++;
+    return accumulator;
+  }, []);
+  return count;
   // Solution code here...
 };
 
