@@ -143,6 +143,10 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
+  return str.split('').reduce((accumulator, value) => {
+    accumulator = value + accumulator;
+    return accumulator;
+  }, '');
   // Solution code here...
 };
 
