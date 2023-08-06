@@ -23,6 +23,7 @@ Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
 
 const getNames = (arr) => {
+  return arr.map((element) => element.name.split('').reverse('').join(''));
   // Solution code here...
 };
 
@@ -107,7 +108,6 @@ console.log(a) prints [1, 2, 3, 4]
 
 const append = (arr1, arr2) => {
   // Solution code here...
-
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -123,7 +123,12 @@ Run your tests from the console: jest challenges-02.test.js
 
 describe('Testing challenge 1', () => {
   test('It returns an array of names reversed', () => {
-    expect(getNames([{name:'lloyd', age: 32, shoeSize: 12}, {name:'jamie', age:21, shoeSize: 8}])).toStrictEqual(['dyoll', 'eimaj']);
+    expect(
+      getNames([
+        { name: 'lloyd', age: 32, shoeSize: 12 },
+        { name: 'jamie', age: 21, shoeSize: 8 },
+      ])
+    ).toStrictEqual(['dyoll', 'eimaj']);
     expect(getNames([])).toStrictEqual([]);
   });
 });
@@ -158,7 +163,11 @@ describe('Testing challenge 4', () => {
 
 xdescribe('Testing challenge 5', () => {
   test('It should add a property to every object in an array', () => {
-    const a = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
+    const a = [
+      { fullName: 'Octavia Butler' },
+      { fullName: 'Ray Bradbury' },
+      { fullName: 'Kurt Vonnegut' },
+    ];
     setStatusAsAuthor(a);
 
     expect(a[0].isAuthor).toStrictEqual(true);
