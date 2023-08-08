@@ -149,6 +149,14 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
+  for (let value of arr) {
+    if (value.name === character) {
+      return (
+        Object.values(value).filter((current) => typeof current === 'object')
+          .length > 0
+      );
+    }
+  }
   // Solution code here...
 };
 
