@@ -75,8 +75,8 @@ HR has asked you to change the data to make it easier to print so that it looks 
 const updateNumbers = (obj) => {
   let easier_list = Object.entries(obj);
   console.log(easier_list);
-  console.log(easier_list.map(data => data.join(': ')));
-  return easier_list.map(data => data.join(': '));
+  console.log(easier_list.map((data) => data.join(': ')));
+  return easier_list.map((data) => data.join(': '));
   // Solution code here...
 };
 
@@ -131,7 +131,7 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  arr.map(name => houses.push(name.house));
+  arr.map((name) => houses.push(name.house));
   // Solution code here...
   return houses;
 };
