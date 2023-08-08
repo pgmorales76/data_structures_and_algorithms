@@ -117,6 +117,9 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
+  const begin_with_capital = /[A-Z]\w+/g;
+
+  return str.match(begin_with_capital) || [];
   // Solution code here...
 };
 
