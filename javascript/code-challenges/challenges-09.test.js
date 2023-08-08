@@ -35,6 +35,8 @@ const courseInfo = {
 };
 
 const getCourseKeys = (obj) => {
+  const keys = Object.keys(obj);
+  return keys;
   // Solution code here...
 };
 
