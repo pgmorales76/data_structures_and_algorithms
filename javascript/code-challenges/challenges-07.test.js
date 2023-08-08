@@ -49,6 +49,7 @@ Write a function named joinArray that takes an array and joins all of the elemen
 ------------------------------------------------------------------------------------------------ */
 
 const joinArray = (arr) => {
+  return arr.join(' ');
   // Solution code here...
 };
 
