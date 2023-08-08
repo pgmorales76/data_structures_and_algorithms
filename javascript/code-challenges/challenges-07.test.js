@@ -135,6 +135,12 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
+  let ingredients_array = recipe.ingredients;
+  for (let i = 0; i < ingredients_array.length; i++) {
+    result.push(
+      ingredients_array[i].substr(ingredients_array[i].indexOf(' ', 4) + 1)
+    );
+  }
   // Solution code here...
   return result;
 };
