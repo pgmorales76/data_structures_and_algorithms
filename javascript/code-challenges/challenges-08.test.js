@@ -73,6 +73,8 @@ Write a function named containsW that takes in a string. This function should us
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
+  const has_w = /w/g;
+  return has_w.test(str);
   // Solution code here...
 };
 
