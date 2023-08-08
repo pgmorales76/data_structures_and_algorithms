@@ -103,6 +103,8 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
+  let includes_world = /(world)/g;
+  return includes_world.test(input);
   // Solution code here...
 };
 
