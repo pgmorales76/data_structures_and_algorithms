@@ -130,6 +130,10 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
+  const begin_with_a_or_j = /^[a-j]/i;
+  let filtered_cities = arr.filter((city) => begin_with_a_or_j.test(city));
+  console.log(filtered_cities);
+  return filtered_cities;
   // Solution code here...
 };
 
