@@ -154,7 +154,7 @@ const hasChildrenValues = (arr, character) => {
       return (
         Object.values(value).filter((current) => typeof current === 'object')
           .length > 0
-      );
+      ); 
     }
   }
   // Solution code here...
