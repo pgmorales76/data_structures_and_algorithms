@@ -126,7 +126,9 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 const salesData = (hours, data) => {
   let organized_data = [];
   console.log(hours, data);
-  hours.forEach((hour, i) => organized_data.push({sales: `${data[i]} cookies`, time: hour}));
+  hours.forEach((hour, i) =>
+    organized_data.push({ sales: `${data[i]} cookies`, time: hour })
+  );
   return organized_data;
   // Solution code here...
 };
@@ -165,6 +167,17 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
+  let quantity_of_treats = 0;
+  arr.forEach((arr) => {
+    if (arr.store === 'Pet store') {
+      arr.items.forEach((item) => {
+        if (item.name === 'Treats') {
+          quantity_of_treats = item.quantity;
+        }
+      });
+    }
+  });
+  return quantity_of_treats;
   // Solution code here...
 };
 
