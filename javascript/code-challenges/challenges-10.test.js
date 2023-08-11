@@ -29,6 +29,15 @@ For example:
 return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
+  let highest_value = '';
+  for (let i = 0; i <= matrix.length - 1; i++) {
+    for (let j = 0; j <= matrix[i].length - 1; j++) {
+      if (highest_value < matrix[i][j]) {
+        highest_value = matrix[i][j];
+      }
+    }
+  }
+  return highest_value;
   // Solution code here...
 };
 
